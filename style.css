@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5c2e86;
+    border: solid 10px; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(212, 225, 221);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem 5rem;
+    border-radius: 15px;
+    border: springgreen 5px solid;
+    
+}
+
+.results div{
+    display: flex;
+    gap: 7rem;
+    justify-content: center;
+
+
+    img {
+
+        width: 100px;
+
+    }
+    
+}
+
+.user-result img {
+    transform: rotate(90deg);
+}
+
+.computer-result img {
+    transform: rotate(-90deg) rotateY(180deg);
+}
+.result-text {
+    text-align: center;
+    color: #7d2ae8;
+    font-weight: bold;
+    font-size: 3rem;
+    margin:1.5rem 0;
+}
+
+.container .user-result{
+    animation: userMoves 0.7s ease infinite;
+    transform: left;
+
+}
+/*o keyframes é uma regra que especifica a animação de um elemento durante um determinado período de tempo.*/
+@keyframes userMoves{
+    50%{
+        transform: rotate(10deg);
+    }
+    
+}
+
+.container .computer-result{
+    animation: computerMoves 0.7s ease infinite;
+    transform: right;
+}
+@keyframes computerMoves{
+    50%{
+        transform: rotate(-10deg);
+    }
+    
+}
+
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    
+
+    p {
+        font-size: 1.5rem;
+        color: #7d2ae8;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 10;
+    }
+
+}
+
+.option-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.5s ease;
+
+    img {
+        width: 50px;
+    }
+    
+}
+
+.option-image:hover {
+    transform: scale(1.2);
+    opacity: 1.5;
+    transition: 0.3s;
+}
+
+.option-image.active {
+    opacity: 1;
+    transform: scale(1.2);
+    transition: 0.3s;
+}
