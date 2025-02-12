@@ -56,7 +56,7 @@ body {
     margin:1.5rem 0;
 }
 
-.container .user-result{
+.container.start .user-result{
     animation: userMoves 0.7s ease infinite;
     transform: left;
 
@@ -69,7 +69,7 @@ body {
     
 }
 
-.container .computer-result{
+.container.start .computer-result{
     animation: computerMoves 0.7s ease infinite;
     transform: right;
 }
